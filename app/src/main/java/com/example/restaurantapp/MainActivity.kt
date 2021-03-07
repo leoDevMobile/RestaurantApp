@@ -95,7 +95,7 @@ class MainActivity : AppCompatActivity() {
         if(!clicked){
             btn_tool_float.isClickable = true
             btn_logout.isClickable = true
-        }else
+        }else {
             btn_tool_float.isClickable = false
         btn_logout.isClickable = false
 
@@ -104,6 +104,9 @@ class MainActivity : AppCompatActivity() {
 
 
 }
+
+}
+
 
      //   val userId = intent.getStringExtra("user_id")
         //val emailId = intent.getStringExtra("email_id")
