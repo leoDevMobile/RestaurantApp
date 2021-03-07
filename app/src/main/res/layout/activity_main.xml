@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
-
-
 
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
@@ -53,7 +52,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:focusable="false"
+        android:focusable="true"
         android:visibility="invisible"
         android:clickable="true"
         app:layout_constraintStart_toStartOf="@+id/btn_profil"
@@ -68,7 +67,7 @@
         android:layout_height="wrap_content"
         android:backgroundTint="#5763E3"
         android:layout_marginTop="16dp"
-        android:focusable="false"
+        android:focusable="true"
         android:clickable="true"
         android:visibility="invisible"
         app:layout_constraintStart_toStartOf="@+id/btn_logout"
