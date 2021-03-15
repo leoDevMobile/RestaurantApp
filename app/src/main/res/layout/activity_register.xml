@@ -62,7 +62,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textEmailAddress"
-            tools:text="abc@gmail.com"/>
+            tools:text="abc@gmail.com"
+            android:drawablePadding="12dp"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:background="@drawable/custom_input"
+            android:drawableLeft="@drawable/ic_email"
+            android:drawableStart="@drawable/custom_email_icon"/>
 
 
 
@@ -85,7 +91,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPassword"
-            tools:text="123456"/>
+            android:drawablePadding="12dp"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            tools:text="123456"
+            android:background="@drawable/custom_input"
+            android:drawableStart="@drawable/custom_lock_icon"
+            android:drawableLeft="@drawable/ic_lock"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button

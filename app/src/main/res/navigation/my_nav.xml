@@ -42,13 +42,26 @@
         android:label="activity_login"
         tools:layout="@layout/activity_login" />
     <fragment
+        android:id="@+id/tracFragment"
+        android:name="com.example.restaurantapp.TracFragment"
+        android:label="fragment_temp"
+        tools:layout="@layout/fragment_trac" >
+        <action
+            android:id="@+id/action_tracFragment_to_setTracFragment"
+            app:destination="@id/setTracFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
         android:id="@+id/tempFragment"
         android:name="com.example.restaurantapp.TempFragment"
         android:label="fragment_temp"
         tools:layout="@layout/fragment_temp" />
     <fragment
-        android:id="@+id/tracFragment"
-        android:name="com.example.restaurantapp.TracFragment"
-        android:label="fragment_trac"
-        tools:layout="@layout/fragment_trac" />
+        android:id="@+id/setTracFragment"
+        android:name="com.example.restaurantapp.SetTracFragment"
+        android:label="fragment_set_trac"
+        tools:layout="@layout/fragment_set_trac" />
 </navigation>

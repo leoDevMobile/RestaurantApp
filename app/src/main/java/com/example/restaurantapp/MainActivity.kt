@@ -7,7 +7,6 @@ import android.view.View
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import android.widget.Toast
-import androidx.core.content.ContextCompat
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
@@ -16,7 +15,9 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_main.*
 
+
 class MainActivity : AppCompatActivity() {
+
 
     private val rotateOpen: Animation by lazy { AnimationUtils.loadAnimation(this, R.anim.rotate_open_anim) }
     private val rotateClose: Animation by lazy { AnimationUtils.loadAnimation(this, R.anim.rotate_close_anim) }
@@ -37,10 +38,10 @@ class MainActivity : AppCompatActivity() {
 
         btn_logout.setOnClickListener {
         Toast.makeText(this, "déconnexion", Toast.LENGTH_SHORT).show()
-           // FirebaseAuth.getInstance().signOut()
+            FirebaseAuth.getInstance().signOut()
 
-          //  startActivity(Intent(this, LoginActivity::class.java))
-          //  finish()
+            startActivity(Intent(this, LoginActivity::class.java))
+            finish()
         }
 
         btn_tool_float.setOnClickListener {
@@ -108,11 +109,6 @@ class MainActivity : AppCompatActivity() {
 }
 
 
-     //   val userId = intent.getStringExtra("user_id")
-        //val emailId = intent.getStringExtra("email_id")
-
-        //tv_user_id.text = "user ID :: $userId"
-       // tv_email_id.text = "user ID :: $emailId"
 
 
 

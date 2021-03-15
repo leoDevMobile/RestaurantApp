@@ -60,10 +60,16 @@
 
         <EditText
             android:id="@+id/et_login_email"
+            android:drawablePadding="12dp"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:background="@drawable/custom_input"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textEmailAddress"
-            tools:text="abc@gmail.com"/>
+            tools:text="abc@gmail.com"
+            android:drawableLeft="@drawable/ic_email"
+            android:drawableStart="@drawable/custom_email_icon" />
 
 
 
@@ -83,9 +89,15 @@
 
         <EditText
             android:id="@+id/et_login_password"
+            android:drawablePadding="12dp"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPassword"
+            android:background="@drawable/custom_input"
+            android:drawableStart="@drawable/custom_lock_icon"
+            android:drawableLeft="@drawable/ic_lock"
             tools:text="123456"/>
     </com.google.android.material.textfield.TextInputLayout>
 

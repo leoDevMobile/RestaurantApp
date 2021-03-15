@@ -5,9 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
 import android.widget.Toast
-import androidx.core.graphics.rotationMatrix
 import com.google.firebase.auth.FirebaseAuth
-
 import kotlinx.android.synthetic.main.activity_login.*
 import kotlinx.android.synthetic.main.activity_login.tv_register
 import kotlinx.android.synthetic.main.activity_register.*
