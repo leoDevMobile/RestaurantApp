@@ -58,10 +58,51 @@
         android:id="@+id/tempFragment"
         android:name="com.example.restaurantapp.TempFragment"
         android:label="fragment_temp"
-        tools:layout="@layout/fragment_temp" />
+        tools:layout="@layout/fragment_temp" >
+        <action
+            android:id="@+id/action_tempFragment_to_setTempFragment"
+            app:destination="@id/setTempFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
     <fragment
         android:id="@+id/setTracFragment"
         android:name="com.example.restaurantapp.SetTracFragment"
         android:label="fragment_set_trac"
         tools:layout="@layout/fragment_set_trac" />
+    <fragment
+        android:id="@+id/setTempFragment"
+        android:name="com.example.restaurantapp.fragments.list.SetTempFragment"
+        android:label="fragment_set_temp"
+        tools:layout="@layout/fragment_set_temp" >
+        <action
+            android:id="@+id/action_setTempFragment_to_addFragment"
+            app:destination="@id/addFragment" />
+        <action
+            android:id="@+id/action_setTempFragment_to_updateFragment"
+            app:destination="@id/updateFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addFragment"
+        android:name="com.example.restaurantapp.fragments.add.AddFragment"
+        android:label="fragment_add"
+        tools:layout="@layout/fragment_add" >
+        <action
+            android:id="@+id/action_addFragment_to_setTempFragment"
+            app:destination="@id/setTempFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateFragment"
+        android:name="com.example.restaurantapp.fragments.update.UpdateFragment"
+        android:label="Update"
+        tools:layout="@layout/fragment_update" >
+        <action
+            android:id="@+id/action_updateFragment_to_setTempFragment"
+            app:destination="@id/setTempFragment" />
+        <argument
+            android:name="currentEquipment"
+            app:argType="com.example.restaurantapp.model.Equipment" />
+    </fragment>
 </navigation>

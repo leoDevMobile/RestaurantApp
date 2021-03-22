@@ -61,6 +61,11 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+    override fun onSupportNavigateUp(): Boolean {
+        val navController = findNavController(R.id.fragment)
+        return navController.navigateUp() || super.onSupportNavigateUp()
+    }
+
     private fun onAddButtonClicked() {
         setVisibility(clicked)
         setAnimation(clicked)
