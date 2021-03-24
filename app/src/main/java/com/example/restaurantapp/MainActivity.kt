@@ -19,10 +19,30 @@ import kotlinx.android.synthetic.main.activity_main.*
 class MainActivity : AppCompatActivity() {
 
 
-    private val rotateOpen: Animation by lazy { AnimationUtils.loadAnimation(this, R.anim.rotate_open_anim) }
-    private val rotateClose: Animation by lazy { AnimationUtils.loadAnimation(this, R.anim.rotate_close_anim) }
-    private val fromBottom: Animation by lazy { AnimationUtils.loadAnimation(this, R.anim.from_bottom_anim) }
-    private val toBottom: Animation by lazy { AnimationUtils.loadAnimation(this, R.anim.to_bottom_anim) }
+    private val rotateOpen: Animation by lazy {
+        AnimationUtils.loadAnimation(
+            this,
+            R.anim.rotate_open_anim
+        )
+    }
+    private val rotateClose: Animation by lazy {
+        AnimationUtils.loadAnimation(
+            this,
+            R.anim.rotate_close_anim
+        )
+    }
+    private val fromBottom: Animation by lazy {
+        AnimationUtils.loadAnimation(
+            this,
+            R.anim.from_bottom_anim
+        )
+    }
+    private val toBottom: Animation by lazy {
+        AnimationUtils.loadAnimation(
+            this,
+            R.anim.to_bottom_anim
+        )
+    }
 
     private var clicked = false
 
@@ -32,12 +52,12 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         btn_profil.setOnClickListener {
-        onAddButtonClicked()
+            onAddButtonClicked()
 
         }
 
         btn_logout.setOnClickListener {
-        Toast.makeText(this, "déconnexion", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "déconnexion", Toast.LENGTH_SHORT).show()
             FirebaseAuth.getInstance().signOut()
 
             startActivity(Intent(this, LoginActivity::class.java))
@@ -50,11 +70,10 @@ class MainActivity : AppCompatActivity() {
         }
 
 
-
-
         val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottomNavigationView)
         val navController = findNavController(R.id.fragment)
-        val appBarConfiguration = AppBarConfiguration(setOf(R.id.firstFragment, R.id.secondFragment, R.id.thirdFragment))
+        val appBarConfiguration =
+            AppBarConfiguration(setOf(R.id.firstFragment, R.id.secondFragment, R.id.thirdFragment))
         setupActionBarWithNavController(navController, appBarConfiguration)
 
         bottomNavigationView.setupWithNavController(navController)
@@ -75,41 +94,40 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setVisibility(clicked: Boolean) {
-        if(!clicked){
+        if (!clicked) {
             btn_logout.visibility = View.VISIBLE
             btn_tool_float.visibility = View.VISIBLE
-        }else{
+        } else {
             btn_logout.visibility = View.INVISIBLE
             btn_tool_float.visibility = View.INVISIBLE
         }
     }
 
     private fun setAnimation(clicked: Boolean) {
-        if(!clicked){
+        if (!clicked) {
             btn_profil.startAnimation(rotateOpen)
             btn_tool_float.startAnimation(fromBottom)
             btn_logout.startAnimation(fromBottom)
-        }else{
+        } else {
             btn_profil.startAnimation(rotateClose)
             btn_tool_float.startAnimation(toBottom)
             btn_logout.startAnimation(toBottom)
         }
     }
 
-    private fun setClickable(clicked: Boolean){
+    private fun setClickable(clicked: Boolean) {
 
-        if(!clicked){
+        if (!clicked) {
             btn_tool_float.isClickable = true
             btn_logout.isClickable = true
-        }else {
+        } else {
             btn_tool_float.isClickable = false
-        btn_logout.isClickable = false
+            btn_logout.isClickable = false
+
+        }
+
 
     }
-
-
-
-}
 
 }
 

@@ -26,7 +26,7 @@ class ListAdapter: RecyclerView.Adapter<ListAdapter.MyViewHolder>() {
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         val currentItem = equipmentList[position]
-        holder.itemView.txt_id.text = currentItem.id.toString()
+        //holder.itemView.txt_id.text = currentItem.id.toString()
         holder.itemView.txt_name.text = currentItem.user
         holder.itemView.txt_date.text = currentItem.date.toString()
         holder.itemView.txt_hour.text = currentItem.time.toString()

@@ -7,81 +7,108 @@
     android:padding="24sp"
     android:id="@+id/rowLayout">
 
-    <TextView
-        android:id="@+id/txt_id"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:text="1"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.509" />
+
 
     <TextView
         android:id="@+id/txt_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="52dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="24dp"
         android:text="Nicolas"
-        android:textSize="24sp"
+        android:textSize="12sp"
         android:textStyle="italic"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/txt_id"
-        app:layout_constraintTop_toBottomOf="@+id/txt_equip"
-        app:layout_constraintVertical_bias="0.791" />
+        app:layout_constraintStart_toStartOf="@+id/txt_equip"
+        app:layout_constraintTop_toBottomOf="@+id/txt_equip" />
+
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:text="date :"
+        android:textSize="12sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_name"
+        app:layout_constraintStart_toEndOf="@+id/txt_name"
+        app:layout_constraintTop_toTopOf="@+id/txt_name"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:text="heure :"
+        android:textSize="12sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_date"
+        app:layout_constraintStart_toEndOf="@+id/txt_date"
+        app:layout_constraintTop_toTopOf="@+id/txt_date"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/txt_equip"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="52dp"
-        android:layout_marginTop="4dp"
         android:text="Frigo"
         android:textColor="@android:color/holo_red_light"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/txt_id"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/txt_date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginStart="12dp"
         android:text="12"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/txt_hour"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textSize="12sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="@+id/textView4"
+        app:layout_constraintStart_toEndOf="@+id/textView4"
+        app:layout_constraintTop_toTopOf="@+id/textView4"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/txt_hour"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="200dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginStart="12dp"
         android:text="43"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textSize="12sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="@+id/textView5"
+        app:layout_constraintStart_toEndOf="@+id/textView5"
+        app:layout_constraintTop_toTopOf="@+id/textView5"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/txt_temp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="8"
+        android:textColor="@android:color/holo_red_light"
         android:textSize="24sp"
         android:textStyle="bold"
-        android:textColor="@android:color/holo_red_light"
-        app:layout_constraintBottom_toBottomOf="@+id/txt_date"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_equip"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/txt_date"
-        app:layout_constraintTop_toTopOf="@+id/txt_date" />
+        app:layout_constraintHorizontal_bias="0.157"
+        app:layout_constraintStart_toEndOf="@+id/txt_equip"
+        app:layout_constraintTop_toTopOf="@+id/txt_equip" />
+
+    <TextView
+        android:id="@+id/txt_degres"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="°"
+        android:textColor="@android:color/holo_red_light"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_temp"
+        app:layout_constraintStart_toEndOf="@+id/txt_temp"
+        app:layout_constraintTop_toTopOf="@+id/txt_temp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

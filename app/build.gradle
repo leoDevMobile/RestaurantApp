@@ -99,8 +99,9 @@ dependencies {
     // optional - Test helpers
     testImplementation "androidx.room:room-testing:$room_version"
 
-//  lottie
+    //  lottie
 
     implementation 'com.airbnb.android:lottie:3.5.0'
+
 
 }
